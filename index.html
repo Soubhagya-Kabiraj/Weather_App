@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weatherly - Weather App</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- Header -->
+    <header>
+        <div class="logo">🌤️ Weatherly</div>
+
+        <div class="search">
+            <input id="cityInput" type="text" placeholder="Search city...">
+            <button id="searchBtn">Search</button>
+        </div>
+    </header>
+
+    <!-- Main Weather -->
+    <main>
+
+        <section class="hero">
+
+            <div class="location">
+                <h2 id="city">Kolkata, IN</h2>
+                <p id="date">Loading date...</p>
+                <p id="time">--:--</p>
+            </div>
+
+            <div class="current-weather">
+
+                <div class="temperature">
+                    <img id="weatherIcon" src="" alt="Weather">
+                    <span id="temperature">--°</span>
+                </div>
+
+                <div class="condition">
+                    <h2 id="condition">Loading...</h2>
+                    <p>Feels like <strong id="feelsLike">--°</strong></p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Hourly -->
+        <section class="section">
+
+            <div class="section-title">
+                <h3>Hourly Forecast</h3>
+                <span>Next 6 hours</span>
+            </div>
+
+            <div class="hourly" id="hourlyForecast"></div>
+
+        </section>
+
+
+        <!-- Weather Details -->
+        <section class="section">
+
+            <div class="section-title">
+                <h3>Today's Details</h3>
+            </div>
+
+            <div class="details">
+
+                <div class="detail-card">
+                    <div class="detail-icon">🌧️</div>
+                    <div>
+                        <span>Precipitation</span>
+                        <strong id="precipitation">--%</strong>
+                    </div>
+                </div>
+
+                <div class="detail-card">
+                    <div class="detail-icon">💨</div>
+                    <div>
+                        <span>Wind</span>
+                        <strong id="wind">-- km/h</strong>
+                    </div>
+                </div>
+
+                <div class="detail-card">
+                    <div class="detail-icon">💧</div>
+                    <div>
+                        <span>Humidity</span>
+                        <strong id="humidity">--%</strong>
+                    </div>
+                </div>
+
+                <div class="detail-card">
+                    <div class="detail-icon">🌫️</div>
+                    <div>
+                        <span>Air Quality</span>
+                        <strong id="airQuality">--</strong>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- 5 Day Forecast -->
+        <section class="section">
+
+            <div class="section-title">
+                <h3>5-Day Forecast</h3>
+            </div>
+
+            <div class="daily" id="dailyForecast"></div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        Weather data powered by OpenWeather
+    </footer>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
